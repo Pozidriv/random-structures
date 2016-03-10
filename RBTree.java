@@ -2,8 +2,8 @@
 /**
  * Implementation of a Red-Black tree.
  * Supported operations: 
- * <li>Insert(node x)
- * <li>Delete(node x)
+ * <li>insert(node x)
+ * <li>delete(node x)
  * @author Youri
  *
  * @param <K>
