@@ -22,7 +22,7 @@ public class RBTree<K> {
 		
 	}
 	
-	public RBTree(int k, K v,	RBTree<K> l, RBTree<K> r, RBTree<K> p, int s, int rk, boolean c) {
+	public RBTree(int k, K v, RBTree<K> l, RBTree<K> r, RBTree<K> p, int s, int rk, boolean c) {
 		key = k;
 		value = v;
 		left = l;
