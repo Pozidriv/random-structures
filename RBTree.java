@@ -33,6 +33,29 @@ public class RBTree<K> {
 		color = c;
 	}
 	
+	public static RBTree makeRBTree(int[] A) {
+		RBTree root = new RBTree();
+		
+		if (A = null) return null;
+		else {
+			root.key = A[(int) A.size()/2];
+			root.left = makeRBTree(A.subList(0, (int) A.size()/2);
+			root.right = makeRBTree(A.subList(((int) A.size()/2) + 1, A.size();
+			
+			if ((root.left != null or root.right != null) && (root.left.color || root.right.color)) {
+				root.color = false;
+			}
+			else root.color = true;
+			
+			if (root.left == null || root.right == null) root.rank = 1;
+			else if (root.left.color) root.rank = root.left.rank;
+			else if (root.right.color) root.rank = root.right.rank;
+			else root.rank = left.rank + 1;
+		}
+		
+		return root;
+	}
+	
 	public void insert(RBTree<K> x) {
 		if (x.key < this.key && this.left == null) {
 			this.left = x;
