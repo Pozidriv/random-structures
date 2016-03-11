@@ -33,16 +33,21 @@ public class RBTree<K> {
 		color = c;
 	}
 	
-	public static RBTree makeRBTree(List<Integer> A) {
+		public static RBTree makeRBTree(int[] A) {
+		return makeRBTree(A, 0, A.length-1);
+	}
+	
+	public static RBTree makeRBTree(int[] A, int start, int end) {
 		RBTree root = new RBTree();
+		int mid = start+(end-start)/2;
 		
-		if (A == null) return null;
+		if (end <= start) return null;
 		else {
-			root.key = A.get((int) A.size()/2);
-			root.left = makeRBTree(A.subList(0, (int) A.size()/2));
-			root.right = makeRBTree(A.subList(((int) A.size()/2) + 1, A.size()));
+			root.key = A[mid];
+			root.left = makeRBTree(A, 0, mid);
+			root.right = makeRBTree(A, mid+1, end);
 			
-			if ((root.left != null || root.right != null) && (root.left.color || root.right.color)) {
+			if ((root.left != null && root.left.color) || (root.right != null && root.right.color)) {
 				root.color = false;
 			}
 			else root.color = true;
