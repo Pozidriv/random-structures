@@ -44,7 +44,7 @@ public class RBTree<K> {
 		if (end <= start) return null;
 		else {
 			root.key = A[mid];
-			root.left = makeRBTree(A, 0, mid);
+			root.left = makeRBTree(A, start, mid);
 			root.right = makeRBTree(A, mid+1, end);
 			
 			if ((root.left != null && root.left.color) || (root.right != null && root.right.color)) {
