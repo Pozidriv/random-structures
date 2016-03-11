@@ -33,8 +33,8 @@ public class RBTree<K> {
 		color = c;
 	}
 	
-		public static RBTree makeRBTree(int[] A) {
-		return makeRBTree(A, 0, A.length-1);
+	public static RBTree makeRBTree(int[] A) {
+		return makeRBTree(A, 0, A.length);
 	}
 	
 	public static RBTree makeRBTree(int[] A, int start, int end) {
